@@ -24,6 +24,9 @@
     <link rel="icon" href="/favicon.png">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
+  
+  <link rel="stylesheet" type="text/css" href="/./avatarrotation.css">
+
   <style type="text/css">
   
     #container.show {
@@ -39,9 +42,60 @@
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="mymenucontainer" onclick="myFunction(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+  </div>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: linear-gradient(to right, #ff9569 0%, #e92758 100%)"></div>
+<!-- <div class="overlay" style="background: linear-gradient(to right, #ff9569 0%, #e92758 100%)"> -->
+<div class="overlay" >
+<!-- 《添加“心知天气”-->
+
+<div id="tp-weather-widget"></div>
+<script>
+        (function(T, h, i, n, k, P, a, g, e) {
+            g = function() {
+                P = h.createElement(i);
+                a = h.getElementsByTagName(i)[0];
+                P.src = k;
+                P.charset = "utf-8";
+                P.async = 1;
+                a.parentNode.insertBefore(P, a)
+            };
+            T["ThinkPageWeatherWidgetObject"] = n;
+            T[n] || (T[n] = function() {
+                (T[n].q = T[n].q || []).push(arguments)
+            });
+            T[n].l = +new Date();
+            if (T.attachEvent) {
+                T.attachEvent("onload", g)
+            } else {
+                T.addEventListener("load", g, false)
+            }
+        }(window, document, "script", "tpwidget", "//widget.thinkpage.cn/widget/chameleon.js"))
+    </script>
+    <script>
+        tpwidget("init", {
+            "flavor": "slim",
+            "location": "WM6N2PM3WY2K",
+            "geolocation": "enabled",
+            "language": "zh-chs",
+            "unit": "c",
+            "theme": "chameleon",
+            "container": "tp-weather-widget",
+            "bubble": "enabled",
+            "alarmType": "badge",
+            "color": "#FFFFFF",
+            "uid": "U88B4B2797",
+            "hash": "c9d7cb43b80ffece52c9a1ebbfbca65f"
+        });
+        tpwidget("show");
+    </script>
+
+<!-- 添加“心知天气”》-->
+</div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -49,7 +103,7 @@
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">RyanCYK</a></h1>
-		  <h2 style="color:#4A8AF4;">嘤其鸣矣，求其友声。</h2>		
+		  <span style="color:#ED242C;font-size:21px;margin-left:5px;">嘤其鸣矣，求其友声。</span>		
 		</hgroup>
 		
 
@@ -69,9 +123,11 @@
     			
             
     			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">ME!</a>
     			
             
+    			
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友情链接</a>
     			
             
 		</nav>
@@ -85,6 +141,12 @@
 					<a class="weixin" target="_blank" href="#" title="weixin"><i class="icon-weixin"></i></a>
 		        
 			</div>
+<!-- 《左侧边栏添加--网易云音乐插件 -->
+<!-- https://www.writebug.site/2018/04/21/hexo-yilia个性化之-添加背景音乐/ -->
+
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=228 height=86 src="//music.163.com/outchain/player?type=2&id=297587&auto=1&height=66"></iframe>
+
+<!-- 网易云音乐插件》-->
 		</nav>
 	</header>		
 </div>
@@ -161,9 +223,36 @@
   
 
         
-        <a href="/2020/03/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
+        
+<a href="/2020/03/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
   	<time datetime="2020-03-06T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-07</time>
 </a>
+
+
+        <!-- 开始添加字数统计-->
+          
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="icon-book icon"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">755字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="icon-book icon"></i>
+        <span class="post-meta-item-text">  阅读时长≈ </span>
+        <span class="post-count">2分</span>
+      </span>
+    </span>
+</div>
+
+
+
+          
         
       </header>
     
@@ -176,9 +265,24 @@
 
 <h3 id="以下内容为测试学习markdown语法，很久没用所以忘了，好好温习一下吧ヾ-◍°∇°◍-ﾉﾞ"><a href="#以下内容为测试学习markdown语法，很久没用所以忘了，好好温习一下吧ヾ-◍°∇°◍-ﾉﾞ" class="headerlink" title="以下内容为测试学习markdown语法，很久没用所以忘了，好好温习一下吧ヾ(◍°∇°◍)ﾉﾞ"></a>以下内容为测试学习markdown语法，很久没用所以忘了，好好温习一下吧ヾ(◍°∇°◍)ﾉﾞ</h3>
         
-          <a class="article-more-a" href="/2020/03/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/#more">more  >></a>
+          <a class="article-more-a" href="/2020/03/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/#more">more >></a>
         
       
+
+ <!-- 添加版权声明 -->
+
+    <!-- 《添加版权声明 -->
+<!--添加版权声明https://github.com/JoeyBling/hexo-theme-yilia-plus/commit/c1215e132f6d5621c5fea83d3c4f7ccbcca074a3-->
+
+
+<!-- #版权基础设定：0-关闭声明； 1-文章对应的md文件里有declare: true属性，才有版权声明； 2-所有文章均有版权声明 -->
+
+  <div class="declare" hidden="hidden"></div>
+
+<!-- 添加版权声明》 -->
+
+      <!-- 添加版权声明 -->
+
 
       
     </div>
@@ -200,7 +304,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
+          <a class="article-more-a hvr-shutter-in-horizontal" href="/2020/03/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
         </p>
       
 
@@ -229,6 +333,8 @@
 
 
 
+
+
   
   
 
@@ -247,7 +353,21 @@
       	</div>
     </div>
   </div>
-</footer>
+
+  
+        <!-- 不蒜子统计 -->
+        <span id="busuanzi_container_site_pv">
+                本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        </span>
+        <span class="post-meta-divider">|</span>
+        <span id="busuanzi_container_site_uv" style='display:none'>
+                本站访客数<span id="busuanzi_value_site_uv"></span>人
+        </span>
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</footer>  
+
+
     </div>
     <script>
 	var yiliaConfig = {
@@ -272,7 +392,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 
 
-<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
     
 <div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
   <div class="tools-nav header-menu">
@@ -287,6 +407,8 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
     
       
+      
+      
     
     
 
@@ -294,13 +416,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">ME!</a></li>
       
         
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友情链接</a></li>
       
         
     </ul>
@@ -368,11 +492,43 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
 
     
+    	<section class="tools-section tools-section-friends" q-show="friends">
+  		
+        <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="http://yjs.ustc.edu.cn/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>中国科大研究生教务处</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+            </li>
+          
+        </ul>
+  		
+    	</section>
+    
 
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">It&#39;s Ryan here&lt;br&gt;毕业于中国科大&lt;br&gt;喜欢追寻新鲜事物&lt;br&gt;譬如技术，音乐，旅行&lt;br&gt;亦喜欢用文字记录生活&lt;br&gt;Email:1318074274@qq.com&lt;br&gt;</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">/·&lt;br&gt;It&#39;s Ryan here&lt;br&gt;毕业于中国科大&lt;br&gt;喜欢追寻新鲜事物&lt;br&gt;譬如技术，音乐，旅行&lt;br&gt;亦喜欢用文字记录生活&lt;br&gt;Email:1318074274@qq.com&lt;br&gt;·/&lt;br&gt;</div>
   	  	
     	</section>
     
@@ -446,5 +602,32 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
-</body>
+  <!-- 代码块复制功能 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.js"></script>
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="/js/clipboard.js"></script>  -->
+<script type="text/javascript" src="/js/clipboard_use.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+  <!--左侧关闭功能-->
+<script>
+    var hide = false;
+    function myFunction(x) {
+        x.classList.toggle("change");
+        if(hide == false){
+            $(".left-col").css('display', 'none');
+            $(".mid-col").css("left", 6);
+            $(".tools-col").css('display', 'none');
+            $(".tools-col.hide").css('display', 'none');
+            $(".mymenucontainer").css('left',0);
+            hide = true;
+        }else{
+            $(".left-col").css('display', '');
+            $(".mid-col").css("left", 300);
+            $(".tools-col").css('display', '');
+            $(".tools-col.hide").css('display', '');
+            $(".mymenucontainer").css('left',265);
+            hide = false;
+        }
+    }
+</script>
 </html>
