@@ -6,21 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.ryancyk.com">
-  <title>Leetcode 119 杨辉三角II | RyanCYK的个人博客</title>
+  <title>Leetcode 122 买卖股票的最佳时机 II | RyanCYK的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="给定一个非负索引 k，其中 k ≤ 33，返回杨辉三角的第 k 行。 在杨辉三角中，每个数是它左上方和右上方的数的和。">
+  <meta name="description" content="给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。 设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。 注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Leetcode 119 杨辉三角II">
-<meta property="og:url" content="http://www.ryancyk.com/2020/03/14/Leetcode-119-%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92II/index.html">
+<meta property="og:title" content="Leetcode 122 买卖股票的最佳时机 II">
+<meta property="og:url" content="http://www.ryancyk.com/2020/03/14/Leetcode-122-%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA%20II/index.html">
 <meta property="og:site_name" content="RyanCYK的个人博客">
-<meta property="og:description" content="给定一个非负索引 k，其中 k ≤ 33，返回杨辉三角的第 k 行。 在杨辉三角中，每个数是它左上方和右上方的数的和。">
+<meta property="og:description" content="给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。 设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。 注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-03-14T07:38:00.909Z">
-<meta property="article:modified_time" content="2020-03-15T13:16:54.622Z">
+<meta property="article:published_time" content="2020-03-14T09:52:47.851Z">
+<meta property="article:modified_time" content="2020-03-15T13:12:32.630Z">
 <meta property="article:author" content="RyanCYK">
 <meta property="article:tag" content="Leetcode">
 <meta property="article:tag" content="Java">
-<meta property="article:tag" content="动态规划">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="RyanCYK的个人博客" type="application/atom+xml">
@@ -216,21 +215,21 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Leetcode-119-杨辉三角II" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Leetcode-122-卖股票的最佳时机 II" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Leetcode 119 杨辉三角II
+      Leetcode 122 买卖股票的最佳时机 II
     </h1>
   
 
         
         
-<a href="/2020/03/14/Leetcode-119-%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92II/" class="archive-article-date">
-  	<time datetime="2020-03-14T07:38:00.909Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-14</time>
+<a href="/2020/03/14/Leetcode-122-%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA%20II/" class="archive-article-date">
+  	<time datetime="2020-03-14T09:52:47.851Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-14</time>
 </a>
 
 
@@ -246,7 +245,7 @@
       <span class="post-meta-item-icon">
         <i class="icon-book icon"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">141字</span>
+        <span class="post-count">517字</span>
       </span>
     </span>
 
@@ -255,7 +254,7 @@
       <span class="post-meta-item-icon">
         <i class="icon-book icon"></i>
         <span class="post-meta-item-text">  阅读时长≈ </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">2分</span>
       </span>
     </span>
 </div>
@@ -269,10 +268,15 @@
     <div class="article-entry" itemprop="articleBody">
       
 
-        <p>给定一个非负索引 k，其中 k ≤ 33，返回杨辉三角的第 k 行。</p>
-<p>在杨辉三角中，每个数是它左上方和右上方的数的和。<a id="more"></a></p>
-<h5 id="示例"><a href="#示例" class="headerlink" title="示例:"></a>示例:</h5><p><code>输入: 3</code><br><code>输出: [1,3,3,1]</code></p>
-<h5 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">getRow</span><span class="params">(<span class="keyword">int</span> rowIndex)</span> </span>&#123;</span><br><span class="line">    List&lt;Integer&gt; pre = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    List&lt;Integer&gt; cur = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= rowIndex; i++) &#123;</span><br><span class="line">        cur = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= i; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (j == <span class="number">0</span> || j == i) &#123;</span><br><span class="line">                cur.add(<span class="number">1</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                cur.add(pre.get(j - <span class="number">1</span>) + pre.get(j));</span><br><span class="line">            &#125; </span><br><span class="line">        &#125;</span><br><span class="line">        pre = cur;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> cur;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。</p>
+<p>设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。</p>
+<p>注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。<a id="more"></a></p>
+<h5 id="示例-1"><a href="#示例-1" class="headerlink" title="示例 1:"></a>示例 1:</h5><p><code>输入:[7,1,5,3,6,4]输出: 7解释: 在第 2 天（股票价格 = 1）的时候买入，在第 3 天（股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5-1 = 4 。随后，在第 4 天（股票价格 = 3）的时候买入，在第 5 天（股票价格 = 6）的时候卖出, 这笔交易所能获得利润 = 6-3 = 3 。</code></p>
+<h5 id="示例-2"><a href="#示例-2" class="headerlink" title="示例 2:"></a>示例 2:</h5><p><code>输入: [1,2,3,4,5]</code></p>
+<p><code>输出: 4</code><br><code>解释: 在第 1 天（股票价格 = 1）的时候买入，在第 5 天 （股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5-1 = 4 。</code><br>     <code>注意你不能在第 1 天和第 2 天接连购买股票，之后再将它们卖出。</code><br>     <code>因为这样属于同时参与了多笔交易，你必须在再次购买前出售掉之前的股票。</code></p>
+<h5 id="示例-3"><a href="#示例-3" class="headerlink" title="示例 3:"></a>示例 3:</h5><p><code>输入: [7,6,4,3,1]</code><br><code>输出: 0</code><br><code>解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。</code></p>
+<h5 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h5><p>解析： <code>[7, 1, 5, 6]</code> 第二天买入，第四天卖出，收益最大（6-1），所以一般人可能会想，怎么判断不是第三天就卖出了呢? 这里就把问题复杂化了，根据题目的意思，当天卖出以后，当天还可以买入，所以其实可以第三天卖出，第三天买入，第四天又卖出（（5-1）+ （6-5） === 6 - 1）。所以算法可以直接简化为只要今天比昨天大，就卖出。 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(<span class="keyword">int</span>[] prices)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=prices.length-<span class="number">1</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(prices[i]&gt;prices[i-<span class="number">1</span>])&#123;</span><br><span class="line">                ans+=prices[i]-prices[i-<span class="number">1</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -298,10 +302,10 @@
     2020-03-15
     <br>
     <strong class="article-titles">本文标题：</strong>
-    <a href="http://www.ryancyk.com/2020/03/14/Leetcode-119-杨辉三角II/" title="Leetcode 119 杨辉三角II" target="_blank">Leetcode 119 杨辉三角II</a>
+    <a href="http://www.ryancyk.com/2020/03/14/Leetcode-122-卖股票的最佳时机 II/" title="Leetcode 122 买卖股票的最佳时机 II" target="_blank">Leetcode 122 买卖股票的最佳时机 II</a>
     <br>
     <strong class="article-url">本文链接：</strong>
-    <a href="http://www.ryancyk.com/2020/03/14/Leetcode-119-杨辉三角II/" title="Leetcode 119 杨辉三角II" target="_blank">http://www.ryancyk.com/2020/03/14/Leetcode-119-杨辉三角II/</a>
+    <a href="http://www.ryancyk.com/2020/03/14/Leetcode-122-卖股票的最佳时机 II/" title="Leetcode 122 买卖股票的最佳时机 II" target="_blank">http://www.ryancyk.com/2020/03/14/Leetcode-122-卖股票的最佳时机 II/</a>
     <br>
     <strong class="copyright">版权声明：</strong>
     本作品采用
@@ -359,10 +363,6 @@
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">动态规划</a>
         		</li>
       		
 		</ul>
@@ -429,7 +429,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://www.ryancyk.com/2020/03/14/Leetcode-119-%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92II/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.ryancyk.com/2020/03/14/Leetcode-122-%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA%20II/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -443,18 +443,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/03/14/Leetcode-121-%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/03/15/Leetcode-125-%E9%AA%8C%E8%AF%81%E5%9B%9E%E6%96%87%E4%B8%B2/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Leetcode 121 买卖股票的最佳时机
+          Leetcode 125 验证回文串
         
       </div>
     </a>
   
   
-    <a href="/2020/03/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">我的第一篇博客</div>
+    <a href="/2020/03/14/Leetcode-121-%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Leetcode 121 买卖股票的最佳时机</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -481,7 +481,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#示例"><span class="toc-number">1.</span> <span class="toc-text">示例:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#题解："><span class="toc-number">2.</span> <span class="toc-text">题解：</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#示例-1"><span class="toc-number">1.</span> <span class="toc-text">示例 1:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#示例-2"><span class="toc-number">2.</span> <span class="toc-text">示例 2:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#示例-3"><span class="toc-number">3.</span> <span class="toc-text">示例 3:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#解法："><span class="toc-number">4.</span> <span class="toc-text">解法：</span></a></li></ol>
                     </div>
                 </span>
             </div>
