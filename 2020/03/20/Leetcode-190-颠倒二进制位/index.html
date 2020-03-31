@@ -16,10 +16,10 @@
 <meta property="og:description" content="颠倒给定的 32 位无符号整数的二进制位。 示例 1：输入: 00000010100101000001111010011100 输出: 00111001011110000010100101000000 解释: 输入的二进制串 00000010100101000001111010011100 表示无符号整数 43261596，因此返回 964176192，其二进制表示形式为 001110010111">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-03-20T12:40:26.473Z">
-<meta property="article:modified_time" content="2020-03-24T01:43:22.459Z">
+<meta property="article:modified_time" content="2020-03-31T08:07:11.600Z">
 <meta property="article:author" content="RyanCYK">
-<meta property="article:tag" content="Java">
 <meta property="article:tag" content="Leetcode">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="RyanCYK的个人博客" type="application/atom+xml">
@@ -245,7 +245,7 @@
       <span class="post-meta-item-icon">
         <i class="icon-book icon"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">246字</span>
+        <span class="post-count">412字</span>
       </span>
     </span>
 
@@ -276,7 +276,7 @@
 <p><code>输出：10111111111111111111111111111111</code></p>
 <p><code>解释：输入的二进制串 11111111111111111111111111111101 表示无符号整数 4294967293，因此返回 3221225471 其二进制表示形式为 10101111110010110010011101101001。</code></p>
 <h5 id="提示："><a href="#提示：" class="headerlink" title="提示："></a>提示：</h5><p><code>请注意，在某些语言（如 Java）中，没有无符号整数类型。在这种情况下，输入和输出都将被指定为有符号整数类型，并且不应影响您的实现，因为无论整数是有符号的还是无符号的，其内部的二进制表示形式都是相同的。</code><br><code>在 Java 中，编译器使用二进制补码记法来表示有符号整数。因此，在上面的 示例 2 中，输入表示有符号整数 -3，输出表示有符号整数 -1073741825。</code></p>
-<h5 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">// you need treat n as an unsigned value</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">reverseBits</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// return Integer.reverse(n);</span></span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">31</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> temp = n &gt;&gt; i; <span class="comment">//一位一位来</span></span><br><span class="line">            temp &amp;= <span class="number">1</span>;  <span class="comment">//取出最低位</span></span><br><span class="line">            temp &lt;&lt;= (<span class="number">31</span>-i); <span class="comment">//颠倒，左移到前面</span></span><br><span class="line">            res |= temp; <span class="comment">//累加</span></span><br><span class="line">            <span class="comment">// res += ((n&gt;&gt;i)&amp;1)&lt;&lt;(31-i);</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//Java里的Integer.reserve()源代码</span></span><br><span class="line">        <span class="comment">/***</span></span><br><span class="line"><span class="comment">            public static int reverseBits(int i) &#123;</span></span><br><span class="line"><span class="comment">                    i = (i &amp; 0x55555555) &lt;&lt; 1 | (i &gt;&gt;&gt; 1) &amp; 0x55555555;</span></span><br><span class="line"><span class="comment">                    i = (i &amp; 0x33333333) &lt;&lt; 2 | (i &gt;&gt;&gt; 2) &amp; 0x33333333;</span></span><br><span class="line"><span class="comment">                    i = (i &amp; 0x0f0f0f0f) &lt;&lt; 4 | (i &gt;&gt;&gt; 4) &amp; 0x0f0f0f0f;</span></span><br><span class="line"><span class="comment">                    i = (i &lt;&lt; 24) | ((i &amp; 0xff00) &lt;&lt; 8) |</span></span><br><span class="line"><span class="comment">                            ((i &gt;&gt;&gt; 8) &amp; 0xff00) | (i &gt;&gt;&gt; 24);</span></span><br><span class="line"><span class="comment">                    return i;</span></span><br><span class="line"><span class="comment">                &#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">       ***/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -299,7 +299,7 @@
     2020-03-20
     <br>
     <strong class="update-time">最后更新：</strong>
-    2020-03-24
+    2020-03-31
     <br>
     <strong class="article-titles">本文标题：</strong>
     <a href="http://www.ryancyk.com/2020/03/20/Leetcode-190-颠倒二进制位/" title="Leetcode 190 颠倒二进制位" target="_blank">Leetcode 190 颠倒二进制位</a>
@@ -358,11 +358,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Leetcode</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Leetcode</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
@@ -443,17 +443,17 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/03/24/Untitled/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/03/24/python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Untitled
+          Python基础知识总结
         
       </div>
     </a>
   
   
-    <a href="/2020/03/19/Leetcode-/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/03/19/Leetcode-189-%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">Leetcode 189 旋转数组</div>
       <i class="icon-circle-right"></i>
     </a>
@@ -650,11 +650,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color4">Leetcode</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Leetcode</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -662,15 +662,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">problems</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">tips</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color5">tips</a>
               </li>
              
               <li class="article-tag-list-item">
