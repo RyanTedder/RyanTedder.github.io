@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://www.ryancyk.com">
   <title>Leetcode 面试题 03. 数组中的重复数字 | RyanCYK的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="找出数组中重复的数字。 在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内。数组中某些数字是重复的，但不知道有几个数字重复了，也不知道每个数字重复了几次。请找出数组中任意一个重复的数字。 示例 1：&#96;&#96;输入：[2, 3, 1, 0, 2, 5, 3]输出：2 或 3  限制：2 &lt;&#x3D; n &lt;&#x3D; 100000 题解：123456789101112131415161">
+  <meta name="description" content="找出数组中重复的数字。 在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内。数组中某些数字是重复的，但不知道有几个数字重复了，也不知道每个数字重复了几次。请找出数组中任意一个重复的数字。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Leetcode 面试题 03. 数组中的重复数字">
 <meta property="og:url" content="http://www.ryancyk.com/2020/05/08/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9803.%20%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E5%AD%97/index.html">
 <meta property="og:site_name" content="RyanCYK的个人博客">
-<meta property="og:description" content="找出数组中重复的数字。 在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内。数组中某些数字是重复的，但不知道有几个数字重复了，也不知道每个数字重复了几次。请找出数组中任意一个重复的数字。 示例 1：&#96;&#96;输入：[2, 3, 1, 0, 2, 5, 3]输出：2 或 3  限制：2 &lt;&#x3D; n &lt;&#x3D; 100000 题解：123456789101112131415161">
+<meta property="og:description" content="找出数组中重复的数字。 在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内。数组中某些数字是重复的，但不知道有几个数字重复了，也不知道每个数字重复了几次。请找出数组中任意一个重复的数字。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-05-08T15:51:05.827Z">
-<meta property="article:modified_time" content="2020-05-08T15:53:54.036Z">
+<meta property="article:modified_time" content="2020-05-08T15:56:04.621Z">
 <meta property="article:author" content="RyanCYK">
 <meta property="article:tag" content="Leetcode">
 <meta property="article:tag" content="Java">
@@ -269,7 +269,7 @@
       
 
         <p>找出数组中重复的数字。</p>
-<p>在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内。数组中某些数字是重复的，但不知道有几个数字重复了，也不知道每个数字重复了几次。请找出数组中任意一个重复的数字。</p>
+<p>在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内。数组中某些数字是重复的，但不知道有几个数字重复了，也不知道每个数字重复了几次。请找出数组中任意一个重复的数字。<a id="more"></a></p>
 <h5 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a>示例 1：</h5><p>``输入：<code></code>[2, 3, 1, 0, 2, 5, 3]<code>输出：2 或 3</code> </p>
 <h5 id="限制："><a href="#限制：" class="headerlink" title="限制："></a>限制：</h5><p><code>2 &lt;= n &lt;= 100000</code></p>
 <h5 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findRepeatNumber</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//方法1</span></span><br><span class="line">        <span class="comment">// int[] arr = new int[nums.length];</span></span><br><span class="line">        <span class="comment">// for(int i=0;i&lt;nums.length;i++)&#123;</span></span><br><span class="line">        <span class="comment">//     arr[nums[i]]++;</span></span><br><span class="line">        <span class="comment">//     if(arr[nums[i]]&gt;1) return nums[i];</span></span><br><span class="line">        <span class="comment">// &#125;</span></span><br><span class="line">        <span class="comment">// return -1;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//方法2</span></span><br><span class="line">        <span class="keyword">if</span>(nums==<span class="keyword">null</span>||nums.length==<span class="number">0</span>) </span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        List&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>;i&lt;nums.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(!list.contains(nums[i]))</span><br><span class="line">                list.add(nums[i]);</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">return</span> nums[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -438,6 +438,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/05/09/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9804.%20%E5%8C%96%E6%A0%88%E4%B8%BA%E9%98%9F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Leetcode 面试题 4. 化栈为队
+        
+      </div>
+    </a>
   
   
     <a href="/2020/05/08/Leetcode%E9%9D%A2%E8%AF%95%E9%A2%98%2003.03%20%E5%A0%86%E7%9B%98%E5%AD%90/" id="article-nav-older" class="article-nav-link-wrap">
@@ -649,11 +658,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">tips</a>
+                <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -661,11 +674,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
+                <a href="javascript:void(0)" class="js-tag color5">tips</a>
               </li>
             
             <div class="clearfix"></div>
