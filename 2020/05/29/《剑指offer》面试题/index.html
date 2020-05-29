@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.ryancyk.com">
-  <title>RyanCYK的个人博客</title>
+  <title>Leetcode 面试题 17. 打印从1到最大的n位数 | RyanCYK的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="个人博客 技术 生活">
-<meta property="og:type" content="website">
-<meta property="og:title" content="RyanCYK的个人博客">
-<meta property="og:url" content="http://www.ryancyk.com/index.html">
+  <meta name="description" content="输入数字 n，按顺序打印出从 1 到最大的 n 位十进制数。比如输入 3，则打印出 1、2、3 一直到最大的 3 位数 999。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Leetcode 面试题 17. 打印从1到最大的n位数">
+<meta property="og:url" content="http://www.ryancyk.com/2020/05/29/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%98/index.html">
 <meta property="og:site_name" content="RyanCYK的个人博客">
-<meta property="og:description" content="个人博客 技术 生活">
+<meta property="og:description" content="输入数字 n，按顺序打印出从 1 到最大的 n 位十进制数。比如输入 3，则打印出 1、2、3 一直到最大的 3 位数 999。">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-29T03:09:35.352Z">
+<meta property="article:modified_time" content="2020-05-29T03:23:48.764Z">
 <meta property="article:author" content="RyanCYK">
+<meta property="article:tag" content="Leetcode">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="RyanCYK的个人博客" type="application/atom+xml">
@@ -211,16 +215,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-《剑指offer》面试题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-《剑指offer》面试题" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/29/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%98/">Leetcode 面试题 17. 打印从1到最大的n位数</a>
+    <h1 class="article-title" itemprop="name">
+      Leetcode 面试题 17. 打印从1到最大的n位数
     </h1>
   
 
@@ -230,6 +232,11 @@
   	<time datetime="2020-05-29T03:09:35.352Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-29</time>
 </a>
 
+
+        <!-- 不蒜子统计 -->
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
 
         <!-- 开始添加字数统计-->
           
@@ -260,10 +267,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>输入数字 n，按顺序打印出从 1 到最大的 n 位十进制数。比如输入 3，则打印出 1、2、3 一直到最大的 3 位数 999。</p>
-        
-          <a class="article-more-a" href="/2020/05/29/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%98/#more">More >></a>
-        
+
+        <p>输入数字 n，按顺序打印出从 1 到最大的 n 位十进制数。比如输入 3，则打印出 1、2、3 一直到最大的 3 位数 999。<a id="more"></a></p>
+<h5 id="示例-1"><a href="#示例-1" class="headerlink" title="示例 1:"></a>示例 1:</h5><p><code>输入: n = 1</code><br><code>输出: [1,2,3,4,5,6,7,8,9]</code></p>
+<h5 id="说明："><a href="#说明：" class="headerlink" title="说明："></a>说明：</h5><p><code>用返回一个整数列表来代替打印</code><br><code>n 为正整数</code></p>
+<h5 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] printNumbers(<span class="keyword">int</span> n) &#123;</span><br><span class="line">        <span class="keyword">int</span> max = (<span class="keyword">int</span>)Math.pow(<span class="number">10</span>, n) - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span>[] res = <span class="keyword">new</span> <span class="keyword">int</span>[max];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; max; i++) &#123;</span><br><span class="line">            res[i] = i + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
       
 
  <!-- 添加版权声明 -->
@@ -274,13 +284,65 @@
 
 <!-- #版权基础设定：0-关闭声明； 1-文章对应的md文件里有declare: true属性，才有版权声明； 2-所有文章均有版权声明 -->
 
-  <div class="declare" hidden="hidden"></div>
+  <div class="declare">
+    <strong class="author">本文作者：</strong>
+    
+      RyanCYK
+    
+    <br>
+    <strong class="create-time">发布时间：</strong>
+    2020-05-29
+    <br>
+    <strong class="update-time">最后更新：</strong>
+    2020-05-29
+    <br>
+    <strong class="article-titles">本文标题：</strong>
+    <a href="http://www.ryancyk.com/2020/05/29/《剑指offer》面试题/" title="Leetcode 面试题 17. 打印从1到最大的n位数" target="_blank">Leetcode 面试题 17. 打印从1到最大的n位数</a>
+    <br>
+    <strong class="article-url">本文链接：</strong>
+    <a href="http://www.ryancyk.com/2020/05/29/《剑指offer》面试题/" title="Leetcode 面试题 17. 打印从1到最大的n位数" target="_blank">http://www.ryancyk.com/2020/05/29/《剑指offer》面试题/</a>
+    <br>
+    <strong class="copyright">版权声明：</strong>
+    本作品采用
+    <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议">CC BY-NC-SA 4.0</a>
+    许可协议进行许可。转载请注明出处！
+    
+      <br>
+      <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>
+    
+  </div>
 
 <!-- 添加版权声明》 -->
 
       <!-- 添加版权声明 -->
 
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>赠人玫瑰，手有余香。<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -315,286 +377,75 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a hvr-shutter-in-horizontal" href="/2020/05/29/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%98/">展开全文 >></a>
-        </p>
-      
 
       
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
         
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-  
-    <article id="post-《剑指offer》面试题15.二进制中1的个数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/27/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9815.%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD1%E7%9A%84%E4%B8%AA%E6%95%B0/">《剑指offer》面试题15.二进制中1的个数</a>
-    </h1>
-  
-
-        
-        
-<a href="/2020/05/27/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9815.%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD1%E7%9A%84%E4%B8%AA%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2020-05-27T15:22:43.116Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-27</time>
-</a>
-
-
-        <!-- 开始添加字数统计-->
-          
-          <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="icon-book icon"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">185字</span>
-      </span>
+      </div>
     </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="icon-book icon"></i>
-        <span class="post-meta-item-text">  阅读时长≈ </span>
-        <span class="post-count">1分</span>
-      </span>
-    </span>
+  </div>
 </div>
 
-
-
-          
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>请实现一个函数，输入一个整数，输出该数二进制表示中 1 的个数。例如，把 9 表示成二进制是 1001，有 2 位是 1。因此，如果输入 9，则该函数输出 2。</p>
-        
-          <a class="article-more-a" href="/2020/05/27/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9815.%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD1%E7%9A%84%E4%B8%AA%E6%95%B0/#more">More >></a>
-        
-      
-
- <!-- 添加版权声明 -->
-
-    <!-- 《添加版权声明 -->
-<!--添加版权声明https://github.com/JoeyBling/hexo-theme-yilia-plus/commit/c1215e132f6d5621c5fea83d3c4f7ccbcca074a3-->
-
-
-<!-- #版权基础设定：0-关闭声明； 1-文章对应的md文件里有declare: true属性，才有版权声明； 2-所有文章均有版权声明 -->
-
-  <div class="declare" hidden="hidden"></div>
-
-<!-- 添加版权声明》 -->
-
-      <!-- 添加版权声明 -->
-
-
-      
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.ryancyk.com/2020/05/29/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%98/" alt="微信分享二维码">
     </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Leetcode</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/algorithm//" class="article-tag-list-link color5">algorithm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a hvr-shutter-in-horizontal" href="/2020/05/27/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9815.%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD1%E7%9A%84%E4%B8%AA%E6%95%B0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-  
-    <article id="post-《剑指offer》面试题16. 数值的整数次方" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/27/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9816.%20%E6%95%B0%E5%80%BC%E7%9A%84%E6%95%B4%E6%95%B0%E6%AC%A1%E6%96%B9/">《剑指offer》面试题16. 数值的整数次方</a>
-    </h1>
-  
-
-        
-        
-<a href="/2020/05/27/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9816.%20%E6%95%B0%E5%80%BC%E7%9A%84%E6%95%B4%E6%95%B0%E6%AC%A1%E6%96%B9/" class="archive-article-date">
-  	<time datetime="2020-05-27T08:53:13.966Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-27</time>
-</a>
-
-
-        <!-- 开始添加字数统计-->
-          
-          <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="icon-book icon"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">152字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="icon-book icon"></i>
-        <span class="post-meta-item-text">  阅读时长≈ </span>
-        <span class="post-count">1分</span>
-      </span>
-    </span>
 </div>
 
-
-
-          
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>实现函数double Power(double base, int exponent)，求base的exponent次方。不得使用库函数，同时不需要考虑大数问题。</p>
-        
-          <a class="article-more-a" href="/2020/05/27/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9816.%20%E6%95%B0%E5%80%BC%E7%9A%84%E6%95%B4%E6%95%B0%E6%AC%A1%E6%96%B9/#more">More >></a>
-        
-      
-
- <!-- 添加版权声明 -->
-
-    <!-- 《添加版权声明 -->
-<!--添加版权声明https://github.com/JoeyBling/hexo-theme-yilia-plus/commit/c1215e132f6d5621c5fea83d3c4f7ccbcca074a3-->
-
-
-<!-- #版权基础设定：0-关闭声明； 1-文章对应的md文件里有declare: true属性，才有版权声明； 2-所有文章均有版权声明 -->
-
-  <div class="declare" hidden="hidden"></div>
-
-<!-- 添加版权声明》 -->
-
-      <!-- 添加版权声明 -->
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Leetcode</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/algorithm//" class="article-tag-list-link color5">algorithm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a hvr-shutter-in-horizontal" href="/2020/05/27/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9816.%20%E6%95%B0%E5%80%BC%E7%9A%84%E6%95%B4%E6%95%B0%E6%AC%A1%E6%96%B9/">展开全文 >></a>
-        </p>
-      
-
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/27/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9815.%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD1%E7%9A%84%E4%B8%AA%E6%95%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">《剑指offer》面试题15.二进制中1的个数</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -609,971 +460,61 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-
-
-  
-    <article id="post-《剑指offer》面试题14-2.剪绳子" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/26/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9814-2.%E5%89%AA%E7%BB%B3%E5%AD%90/">《剑指offer》面试题14-2.剪绳子</a>
-    </h1>
-  
-
-        
-        
-<a href="/2020/05/26/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9814-2.%E5%89%AA%E7%BB%B3%E5%AD%90/" class="archive-article-date">
-  	<time datetime="2020-05-26T04:49:30.497Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-26</time>
-</a>
-
-
-        <!-- 开始添加字数统计-->
-          
-          <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="icon-book icon"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">249字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="icon-book icon"></i>
-        <span class="post-meta-item-text">  阅读时长≈ </span>
-        <span class="post-count">1分</span>
-      </span>
-    </span>
-</div>
-
-
-
-          
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>给你一根长度为 n 的绳子，请把绳子剪成整数长度的 m 段（m、n都是整数，n&gt;1并且m&gt;1），每段绳子的长度记为 k[0],k[1]…k[m] 。请问 k[0]<em>k[1]</em>…*k[m] 可能的最大乘积是多少？例如，当绳子的长度是8时，我们把它剪成长度分别为2、3、3的三段，此时得到的最大乘积是18。</p>
-<p>答案需要取模 1e9+7（1000000007），如计算初始结果为：1000000008，请返回 1。</p>
-        
-          <a class="article-more-a" href="/2020/05/26/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9814-2.%E5%89%AA%E7%BB%B3%E5%AD%90/#more">More >></a>
-        
-      
-
- <!-- 添加版权声明 -->
-
-    <!-- 《添加版权声明 -->
-<!--添加版权声明https://github.com/JoeyBling/hexo-theme-yilia-plus/commit/c1215e132f6d5621c5fea83d3c4f7ccbcca074a3-->
-
-
-<!-- #版权基础设定：0-关闭声明； 1-文章对应的md文件里有declare: true属性，才有版权声明； 2-所有文章均有版权声明 -->
-
-  <div class="declare" hidden="hidden"></div>
-
-<!-- 添加版权声明》 -->
-
-      <!-- 添加版权声明 -->
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Leetcode</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/algorithm//" class="article-tag-list-link color5">algorithm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a hvr-shutter-in-horizontal" href="/2020/05/26/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9814-2.%E5%89%AA%E7%BB%B3%E5%AD%90/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#示例-1"><span class="toc-number">1.</span> <span class="toc-text">示例 1:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#说明："><span class="toc-number">2.</span> <span class="toc-text">说明：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#题解："><span class="toc-number">3.</span> <span class="toc-text">题解：</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
 
-
-
-  
-    <article id="post-《剑指offer》面试题14-1.剪绳子" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/25/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9814-1.%E5%89%AA%E7%BB%B3%E5%AD%90/">《剑指offer》面试题14-1.剪绳子</a>
-    </h1>
-  
-
-        
-        
-<a href="/2020/05/25/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9814-1.%E5%89%AA%E7%BB%B3%E5%AD%90/" class="archive-article-date">
-  	<time datetime="2020-05-25T01:07:46.248Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-25</time>
-</a>
-
-
-        <!-- 开始添加字数统计-->
-          
-          <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="icon-book icon"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">295字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="icon-book icon"></i>
-        <span class="post-meta-item-text">  阅读时长≈ </span>
-        <span class="post-count">1分</span>
-      </span>
-    </span>
-</div>
-
-
-
-          
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>给你一根长度为 n 的绳子，请把绳子剪成整数长度的 m 段（m、n都是整数，n&gt;1并且m&gt;1）,每段绳子的长度记为 k[0],k[1]…k[m-1] 。请问 k[0]k[1]…k[m-1] 可能的最大乘积是多少？例如，当绳子的长度是8时，我们把它剪成长度分别为2、3、3的三段，此时得到的最大乘积是18。</p>
-        
-          <a class="article-more-a" href="/2020/05/25/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9814-1.%E5%89%AA%E7%BB%B3%E5%AD%90/#more">More >></a>
-        
-      
-
- <!-- 添加版权声明 -->
-
-    <!-- 《添加版权声明 -->
-<!--添加版权声明https://github.com/JoeyBling/hexo-theme-yilia-plus/commit/c1215e132f6d5621c5fea83d3c4f7ccbcca074a3-->
-
-
-<!-- #版权基础设定：0-关闭声明； 1-文章对应的md文件里有declare: true属性，才有版权声明； 2-所有文章均有版权声明 -->
-
-  <div class="declare" hidden="hidden"></div>
-
-<!-- 添加版权声明》 -->
-
-      <!-- 添加版权声明 -->
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Leetcode</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/algorithm//" class="article-tag-list-link color5">algorithm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a hvr-shutter-in-horizontal" href="/2020/05/25/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9814-1.%E5%89%AA%E7%BB%B3%E5%AD%90/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-  
-    <article id="post-《剑指offer》面试题13.机器人的运动范围" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/24/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9813.%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E8%BF%90%E5%8A%A8%E8%8C%83%E5%9B%B4/">《剑指offer》面试题 13. 机器人的运动范围</a>
-    </h1>
-  
-
-        
-        
-<a href="/2020/05/24/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9813.%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E8%BF%90%E5%8A%A8%E8%8C%83%E5%9B%B4/" class="archive-article-date">
-  	<time datetime="2020-05-23T16:16:24.357Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-24</time>
-</a>
-
-
-        <!-- 开始添加字数统计-->
-          
-          <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="icon-book icon"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">302字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="icon-book icon"></i>
-        <span class="post-meta-item-text">  阅读时长≈ </span>
-        <span class="post-count">1分</span>
-      </span>
-    </span>
-</div>
-
-
-
-          
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>地上有一个m行n列的方格，从坐标 [0,0] 到坐标 [m-1,n-1] 。一个机器人从坐标 [0, 0] 的格子开始移动，它每次可以向左、右、上、下移动一格（不能移动到方格外），也不能进入行坐标和列坐标的数位之和大于k的格子。例如，当k为18时，机器人能够进入方格 [35, 37] ，因为3+5+3+7=18。但它不能进入方格 [35, 38]，因为3+5+3+8=19。请问该机器人能够到达多少个格子？</p>
-        
-          <a class="article-more-a" href="/2020/05/24/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9813.%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E8%BF%90%E5%8A%A8%E8%8C%83%E5%9B%B4/#more">More >></a>
-        
-      
-
- <!-- 添加版权声明 -->
-
-    <!-- 《添加版权声明 -->
-<!--添加版权声明https://github.com/JoeyBling/hexo-theme-yilia-plus/commit/c1215e132f6d5621c5fea83d3c4f7ccbcca074a3-->
-
-
-<!-- #版权基础设定：0-关闭声明； 1-文章对应的md文件里有declare: true属性，才有版权声明； 2-所有文章均有版权声明 -->
-
-  <div class="declare" hidden="hidden"></div>
-
-<!-- 添加版权声明》 -->
-
-      <!-- 添加版权声明 -->
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Leetcode</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/algorithm//" class="article-tag-list-link color5">algorithm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a hvr-shutter-in-horizontal" href="/2020/05/24/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9813.%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E8%BF%90%E5%8A%A8%E8%8C%83%E5%9B%B4/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-  
-    <article id="post-《剑指offer》面试题12. 矩阵中的路径" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/22/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9812.%20%E7%9F%A9%E9%98%B5%E4%B8%AD%E7%9A%84%E8%B7%AF%E5%BE%84/">《剑指offer》面试题 12. 矩阵中的路径</a>
-    </h1>
-  
-
-        
-        
-<a href="/2020/05/22/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9812.%20%E7%9F%A9%E9%98%B5%E4%B8%AD%E7%9A%84%E8%B7%AF%E5%BE%84/" class="archive-article-date">
-  	<time datetime="2020-05-22T03:26:39.504Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-22</time>
-</a>
-
-
-        <!-- 开始添加字数统计-->
-          
-          <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="icon-book icon"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">516字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="icon-book icon"></i>
-        <span class="post-meta-item-text">  阅读时长≈ </span>
-        <span class="post-count">2分</span>
-      </span>
-    </span>
-</div>
-
-
-
-          
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>请设计一个函数，用来判断在一个矩阵中是否存在一条包含某字符串所有字符的路径。路径可以从矩阵中的任意一格开始，每一步可以在矩阵中向左、右、上、下移动一格。如果一条路径经过了矩阵的某一格，那么该路径不能再次进入该格子。例如，在下面的3×4的矩阵中包含一条字符串“bfce”的路径（路径中的字母用加粗标出）。</p>
-<p>[[“a”,<strong>“b”</strong>,”c”,”e”],<br>[“s”,<strong>“f”</strong>,<strong>“c”</strong>,”s”],<br>[“a”,”d”,<strong>“e”</strong>,”e”]]</p>
-<p>但矩阵中不包含字符串“abfb”的路径，因为字符串的第一个字符b占据了矩阵中的第一行第二个格子之后，路径不能再次进入这个格子。</p>
-        
-          <a class="article-more-a" href="/2020/05/22/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9812.%20%E7%9F%A9%E9%98%B5%E4%B8%AD%E7%9A%84%E8%B7%AF%E5%BE%84/#more">More >></a>
-        
-      
-
- <!-- 添加版权声明 -->
-
-    <!-- 《添加版权声明 -->
-<!--添加版权声明https://github.com/JoeyBling/hexo-theme-yilia-plus/commit/c1215e132f6d5621c5fea83d3c4f7ccbcca074a3-->
-
-
-<!-- #版权基础设定：0-关闭声明； 1-文章对应的md文件里有declare: true属性，才有版权声明； 2-所有文章均有版权声明 -->
-
-  <div class="declare" hidden="hidden"></div>
-
-<!-- 添加版权声明》 -->
-
-      <!-- 添加版权声明 -->
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Leetcode</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/algorithm//" class="article-tag-list-link color5">algorithm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a hvr-shutter-in-horizontal" href="/2020/05/22/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9812.%20%E7%9F%A9%E9%98%B5%E4%B8%AD%E7%9A%84%E8%B7%AF%E5%BE%84/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-  
-    <article id="post-《剑指offer》面试题11.旋转数组的最小数字" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/21/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9811.%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97/">《剑指offer》面试题 11. 旋转数组的最小数字</a>
-    </h1>
-  
-
-        
-        
-<a href="/2020/05/21/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9811.%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97/" class="archive-article-date">
-  	<time datetime="2020-05-21T06:45:50.228Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-21</time>
-</a>
-
-
-        <!-- 开始添加字数统计-->
-          
-          <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="icon-book icon"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">232字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="icon-book icon"></i>
-        <span class="post-meta-item-text">  阅读时长≈ </span>
-        <span class="post-count">1分</span>
-      </span>
-    </span>
-</div>
-
-
-
-          
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。输入一个递增排序的数组的一个旋转，输出旋转数组的最小元素。例如，数组 [3,4,5,1,2] 为 [1,2,3,4,5] 的一个旋转，该数组的最小值为1。</p>
-        
-          <a class="article-more-a" href="/2020/05/21/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9811.%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97/#more">More >></a>
-        
-      
-
- <!-- 添加版权声明 -->
-
-    <!-- 《添加版权声明 -->
-<!--添加版权声明https://github.com/JoeyBling/hexo-theme-yilia-plus/commit/c1215e132f6d5621c5fea83d3c4f7ccbcca074a3-->
-
-
-<!-- #版权基础设定：0-关闭声明； 1-文章对应的md文件里有declare: true属性，才有版权声明； 2-所有文章均有版权声明 -->
-
-  <div class="declare" hidden="hidden"></div>
-
-<!-- 添加版权声明》 -->
-
-      <!-- 添加版权声明 -->
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Leetcode</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/algorithm//" class="article-tag-list-link color5">algorithm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a hvr-shutter-in-horizontal" href="/2020/05/21/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9811.%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-  
-    <article id="post-《剑指offer》面试题10. 青蛙跳台问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/21/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9810.%20%E9%9D%92%E8%9B%99%E8%B7%B3%E5%8F%B0%E9%97%AE%E9%A2%98/">《剑指offer》面试题 10. 青蛙跳台问题</a>
-    </h1>
-  
-
-        
-        
-<a href="/2020/05/21/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9810.%20%E9%9D%92%E8%9B%99%E8%B7%B3%E5%8F%B0%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2020-05-20T17:28:04.104Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-21</time>
-</a>
-
-
-        <!-- 开始添加字数统计-->
-          
-          <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="icon-book icon"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">149字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="icon-book icon"></i>
-        <span class="post-meta-item-text">  阅读时长≈ </span>
-        <span class="post-count">1分</span>
-      </span>
-    </span>
-</div>
-
-
-
-          
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>一只青蛙一次可以跳上1级台阶，也可以跳上2级台阶。求该青蛙跳上一个 n 级的台阶总共有多少种跳法。</p>
-<p>答案需要取模 1e9+7（1000000007），如计算初始结果为：1000000008，请返回 1。</p>
-        
-          <a class="article-more-a" href="/2020/05/21/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9810.%20%E9%9D%92%E8%9B%99%E8%B7%B3%E5%8F%B0%E9%97%AE%E9%A2%98/#more">More >></a>
-        
-      
-
- <!-- 添加版权声明 -->
-
-    <!-- 《添加版权声明 -->
-<!--添加版权声明https://github.com/JoeyBling/hexo-theme-yilia-plus/commit/c1215e132f6d5621c5fea83d3c4f7ccbcca074a3-->
-
-
-<!-- #版权基础设定：0-关闭声明； 1-文章对应的md文件里有declare: true属性，才有版权声明； 2-所有文章均有版权声明 -->
-
-  <div class="declare" hidden="hidden"></div>
-
-<!-- 添加版权声明》 -->
-
-      <!-- 添加版权声明 -->
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Leetcode</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/algorithm//" class="article-tag-list-link color5">algorithm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a hvr-shutter-in-horizontal" href="/2020/05/21/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9810.%20%E9%9D%92%E8%9B%99%E8%B7%B3%E5%8F%B0%E9%97%AE%E9%A2%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-  
-    <article id="post-《剑指offer》面试题10 斐波那契数列" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/19/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9810%20%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/">《剑指offer》面试题 10. 斐波那契数列</a>
-    </h1>
-  
-
-        
-        
-<a href="/2020/05/19/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9810%20%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/" class="archive-article-date">
-  	<time datetime="2020-05-19T00:45:43.720Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-19</time>
-</a>
-
-
-        <!-- 开始添加字数统计-->
-          
-          <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="icon-book icon"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">246字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="icon-book icon"></i>
-        <span class="post-meta-item-text">  阅读时长≈ </span>
-        <span class="post-count">1分</span>
-      </span>
-    </span>
-</div>
-
-
-
-          
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>写一个函数，输入 n ，求斐波那契（Fibonacci）数列的第 n 项。斐波那契数列的定义如下：</p>
-<p>F(0) = 0,   F(1) = 1<br>F(N) = F(N - 1) + F(N - 2), 其中 N &gt; 1.<br>斐波那契数列由 0 和 1 开始，之后的斐波那契数就是由之前的两数相加而得出。</p>
-<p>答案需要取模 1e9+7（1000000007），如计算初始结果为：1000000008，请返回 1。</p>
-        
-          <a class="article-more-a" href="/2020/05/19/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9810%20%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/#more">More >></a>
-        
-      
-
- <!-- 添加版权声明 -->
-
-    <!-- 《添加版权声明 -->
-<!--添加版权声明https://github.com/JoeyBling/hexo-theme-yilia-plus/commit/c1215e132f6d5621c5fea83d3c4f7ccbcca074a3-->
-
-
-<!-- #版权基础设定：0-关闭声明； 1-文章对应的md文件里有declare: true属性，才有版权声明； 2-所有文章均有版权声明 -->
-
-  <div class="declare" hidden="hidden"></div>
-
-<!-- 添加版权声明》 -->
-
-      <!-- 添加版权声明 -->
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Leetcode</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/algorithm//" class="article-tag-list-link color5">algorithm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a hvr-shutter-in-horizontal" href="/2020/05/19/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9810%20%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
+    <section id="comments" class="comments">
+      <style>
+        .comments{margin:30px;padding:10px;background:#fff}
+        @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+      </style>
+      <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "6hXkIMlQEOeANIGgrPVKdSjz-gzGzoHsz",
+            app_key: "iJOD4NfFS94UiRBFJKBoemfe",
+            placeholder: "我要吐槽啊......",
+            avatar:"retro"
+        });
+    }
+</script>
+  </section>
 
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
-    </nav>
   
+
+  
+
+  
+
+  
+
+
 
 
           </div>
@@ -1609,8 +550,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
