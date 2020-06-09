@@ -8,12 +8,12 @@
   <link rel="dns-prefetch" href="http://www.ryancyk.com">
   <title>无显示器，树莓派新手入门（详细） | RyanCYK的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言：最近新入手了一台树莓派，型号为3B+。作为新手，在参考网上各种教程以后，经过自己实践，成功启动树莓派，因此记录在博客里供以后回顾，以及给有需要的新手提供一点参考。废话不多说，我们开始吧！ 工欲善其事，必先利其器。在开始配置之前，先盘点一下需要的工具。由于我没有另外购买显示器，因此以下内容作为无显示器下的配置参考。 工具： 硬件部分：  树莓派3b+主机一台 网线一根 电源&amp;电源线一组">
+  <meta name="description" content="前言：最近新入手了一台树莓派，型号为3B+。作为新手，在参考网上各种教程以后，经过自己实践，成功启动树莓派，因此记录在博客里供以后回顾，以及给有需要的新手提供一点参考。废话不多说，我们开始吧！ 工欲善其事，必先利其器。在开始配置之前，先盘点一下需要的工具。由于我没有另外购买显示器，因此以下内容作为无显示器下的配置参考。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="无显示器，树莓派新手入门（详细）">
 <meta property="og:url" content="http://www.ryancyk.com/2020/06/01/%E6%97%A0%E6%98%BE%E7%A4%BA%E5%99%A8%EF%BC%8C%E6%A0%91%E8%8E%93%E6%B4%BE%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8/index.html">
 <meta property="og:site_name" content="RyanCYK的个人博客">
-<meta property="og:description" content="前言：最近新入手了一台树莓派，型号为3B+。作为新手，在参考网上各种教程以后，经过自己实践，成功启动树莓派，因此记录在博客里供以后回顾，以及给有需要的新手提供一点参考。废话不多说，我们开始吧！ 工欲善其事，必先利其器。在开始配置之前，先盘点一下需要的工具。由于我没有另外购买显示器，因此以下内容作为无显示器下的配置参考。 工具： 硬件部分：  树莓派3b+主机一台 网线一根 电源&amp;电源线一组">
+<meta property="og:description" content="前言：最近新入手了一台树莓派，型号为3B+。作为新手，在参考网上各种教程以后，经过自己实践，成功启动树莓派，因此记录在博客里供以后回顾，以及给有需要的新手提供一点参考。废话不多说，我们开始吧！ 工欲善其事，必先利其器。在开始配置之前，先盘点一下需要的工具。由于我没有另外购买显示器，因此以下内容作为无显示器下的配置参考。">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://www.ryancyk.com/2020/06/01/%E6%97%A0%E6%98%BE%E7%A4%BA%E5%99%A8%EF%BC%8C%E6%A0%91%E8%8E%93%E6%B4%BE%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8/upload%5Cimage-20200601112243307.png">
 <meta property="og:image" content="http://www.ryancyk.com/2020/06/01/%E6%97%A0%E6%98%BE%E7%A4%BA%E5%99%A8%EF%BC%8C%E6%A0%91%E8%8E%93%E6%B4%BE%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8/upload%5Cimage-20200601112313096.png">
@@ -21,7 +21,7 @@
 <meta property="og:image" content="http://www.ryancyk.com/2020/06/01/%E6%97%A0%E6%98%BE%E7%A4%BA%E5%99%A8%EF%BC%8C%E6%A0%91%E8%8E%93%E6%B4%BE%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8/upload%5Cimage-20200601112648715.png">
 <meta property="og:image" content="http://www.ryancyk.com/2020/06/01/%E6%97%A0%E6%98%BE%E7%A4%BA%E5%99%A8%EF%BC%8C%E6%A0%91%E8%8E%93%E6%B4%BE%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8/upload%5Cimage-20200601112947014.png">
 <meta property="article:published_time" content="2020-06-01T03:09:07.733Z">
-<meta property="article:modified_time" content="2020-06-01T03:31:46.873Z">
+<meta property="article:modified_time" content="2020-06-03T16:13:47.900Z">
 <meta property="article:author" content="RyanCYK">
 <meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary">
@@ -274,7 +274,7 @@
       
 
         <h4 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h4><p>最近新入手了一台树莓派，型号为3B+。作为新手，在参考网上各种教程以后，经过自己实践，成功启动树莓派，因此记录在博客里供以后回顾，以及给有需要的新手提供一点参考。废话不多说，我们开始吧！</p>
-<p>工欲善其事，必先利其器。在开始配置之前，先盘点一下需要的工具。由于我没有另外购买显示器，因此以下内容作为无显示器下的配置参考。</p>
+<p>工欲善其事，必先利其器。在开始配置之前，先盘点一下需要的工具。由于我没有另外购买显示器，因此以下内容作为无显示器下的配置参考。<a id="more"></a></p>
 <h4 id="工具："><a href="#工具：" class="headerlink" title="工具："></a>工具：</h4><blockquote>
 <p><strong>硬件部分：</strong></p>
 <ol>
@@ -324,7 +324,7 @@
     2020-06-01
     <br>
     <strong class="update-time">最后更新：</strong>
-    2020-06-01
+    2020-06-04
     <br>
     <strong class="article-titles">本文标题：</strong>
     <a href="http://www.ryancyk.com/2020/06/01/无显示器，树莓派新手入门/" title="无显示器，树莓派新手入门（详细）" target="_blank">无显示器，树莓派新手入门（详细）</a>
@@ -687,6 +687,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">ML</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
@@ -695,19 +703,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">tips</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">ML</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
               </li>
             
             <div class="clearfix"></div>
