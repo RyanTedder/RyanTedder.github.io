@@ -6,22 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.ryancyk.com">
-  <title>Leetcode 119 杨辉三角II | RyanCYK的个人博客</title>
+  <title>《剑指offer》面试题27. 二叉树的镜像 | RyanCYK的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="给定一个非负索引 k，其中 k ≤ 33，返回杨辉三角的第 k 行。 在杨辉三角中，每个数是它左上方和右上方的数的和。">
+  <meta name="description" content="请完成一个函数，输入一个二叉树，该函数输出它的镜像。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Leetcode 119 杨辉三角II">
-<meta property="og:url" content="http://www.ryancyk.com/2020/03/14/Leetcode-119-%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92II/index.html">
+<meta property="og:title" content="《剑指offer》面试题27. 二叉树的镜像">
+<meta property="og:url" content="http://www.ryancyk.com/2020/06/18/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9827.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%95%9C%E5%83%8F/index.html">
 <meta property="og:site_name" content="RyanCYK的个人博客">
-<meta property="og:description" content="给定一个非负索引 k，其中 k ≤ 33，返回杨辉三角的第 k 行。 在杨辉三角中，每个数是它左上方和右上方的数的和。">
+<meta property="og:description" content="请完成一个函数，输入一个二叉树，该函数输出它的镜像。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-03-14T07:38:00.909Z">
-<meta property="article:modified_time" content="2020-03-15T13:16:54.622Z">
+<meta property="og:image" content="https://i.loli.net/2020/06/18/mNWvp16giI9jKGH.png">
+<meta property="article:published_time" content="2020-06-18T03:35:49.235Z">
+<meta property="article:modified_time" content="2020-06-18T07:44:59.094Z">
 <meta property="article:author" content="RyanCYK">
 <meta property="article:tag" content="Leetcode">
 <meta property="article:tag" content="Java">
-<meta property="article:tag" content="动态规划">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/06/18/mNWvp16giI9jKGH.png">
   
     <link rel="alternative" href="/atom.xml" title="RyanCYK的个人博客" type="application/atom+xml">
   
@@ -220,21 +221,21 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Leetcode-119-杨辉三角II" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-《剑指offer》面试题27.二叉树的镜像" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Leetcode 119 杨辉三角II
+      《剑指offer》面试题27. 二叉树的镜像
     </h1>
   
 
         
         
-<a href="/2020/03/14/Leetcode-119-%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92II/" class="archive-article-date">
-  	<time datetime="2020-03-14T07:38:00.909Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-14</time>
+<a href="/2020/06/18/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9827.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%95%9C%E5%83%8F/" class="archive-article-date">
+  	<time datetime="2020-06-18T03:35:49.235Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-18</time>
 </a>
 
 
@@ -253,7 +254,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text" style="font-size: 15px;color: navy">  字数统计: </span>
-        <span class="post-count" style="font-size: 14px;color: navy">141</span>
+        <span class="post-count" style="font-size: 14px;color: navy">129</span>
       </span>
     </span>
     
@@ -274,10 +275,11 @@
     <div class="article-entry" itemprop="articleBody">
       
 
-        <p>给定一个非负索引 k，其中 k ≤ 33，返回杨辉三角的第 k 行。</p>
-<p>在杨辉三角中，每个数是它左上方和右上方的数的和。<a id="more"></a></p>
-<h5 id="示例"><a href="#示例" class="headerlink" title="示例:"></a>示例:</h5><p><code>输入: 3</code><br><code>输出: [1,3,3,1]</code></p>
-<h5 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">getRow</span><span class="params">(<span class="keyword">int</span> rowIndex)</span> </span>&#123;</span><br><span class="line">    List&lt;Integer&gt; pre = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    List&lt;Integer&gt; cur = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= rowIndex; i++) &#123;</span><br><span class="line">        cur = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= i; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (j == <span class="number">0</span> || j == i) &#123;</span><br><span class="line">                cur.add(<span class="number">1</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                cur.add(pre.get(j - <span class="number">1</span>) + pre.get(j));</span><br><span class="line">            &#125; </span><br><span class="line">        &#125;</span><br><span class="line">        pre = cur;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> cur;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>请完成一个函数，输入一个二叉树，该函数输出它的镜像。<a id="more"></a></p>
+<p><img src="https://i.loli.net/2020/06/18/mNWvp16giI9jKGH.png" alt></p>
+<h5 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a>示例 1：</h5><p><code>输入：root = [4,2,7,1,3,6,9]</code><br><code>输出：[4,7,2,9,6,3,1]</code></p>
+<h5 id="限制："><a href="#限制：" class="headerlink" title="限制："></a>限制：</h5><p><code>0 &lt;= 节点个数 &lt;= 1000</code></p>
+<h5 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * public class TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode left;</span></span><br><span class="line"><span class="comment"> *     TreeNode right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">mirrorTree</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        TreeNode tmpNode = root.left;</span><br><span class="line">        root.left = mirrorTree(root.right);</span><br><span class="line">        root.right = mirrorTree(tmpNode);</span><br><span class="line">        <span class="comment">// TreeNode left = mirrorTree(root.left);</span></span><br><span class="line">        <span class="comment">// TreeNode right = mirrorTree(root.right);</span></span><br><span class="line">        <span class="comment">// root.left = right;</span></span><br><span class="line">        <span class="comment">// root.right = left;</span></span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -316,16 +318,16 @@
     
     <br>
     <strong class="create-time">发布时间：</strong>
-    2020-03-14
+    2020-06-18
     <br>
     <strong class="update-time">最后更新：</strong>
-    2020-03-15
+    2020-06-18
     <br>
     <strong class="article-titles">本文标题：</strong>
-    <a href="http://www.ryancyk.com/2020/03/14/Leetcode-119-杨辉三角II/" title="Leetcode 119 杨辉三角II" target="_blank">Leetcode 119 杨辉三角II</a>
+    <a href="http://www.ryancyk.com/2020/06/18/《剑指offer》面试题27.二叉树的镜像/" title="《剑指offer》面试题27. 二叉树的镜像" target="_blank">《剑指offer》面试题27. 二叉树的镜像</a>
     <br>
     <strong class="article-url">本文链接：</strong>
-    <a href="http://www.ryancyk.com/2020/03/14/Leetcode-119-杨辉三角II/" title="Leetcode 119 杨辉三角II" target="_blank">http://www.ryancyk.com/2020/03/14/Leetcode-119-杨辉三角II/</a>
+    <a href="http://www.ryancyk.com/2020/06/18/《剑指offer》面试题27.二叉树的镜像/" title="《剑指offer》面试题27. 二叉树的镜像" target="_blank">http://www.ryancyk.com/2020/06/18/《剑指offer》面试题27.二叉树的镜像/</a>
     <br>
     <strong class="copyright">版权声明：</strong>
     本作品采用
@@ -380,10 +382,6 @@
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">动态规划</a>
         		</li>
       		
 		</ul>
@@ -450,7 +448,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://www.ryancyk.com/2020/03/14/Leetcode-119-%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92II/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.ryancyk.com/2020/06/18/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9827.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%95%9C%E5%83%8F/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -464,18 +462,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/03/14/Leetcode-121-%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/06/18/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9826.%20%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Leetcode 121 买卖股票的最佳时机
+          《剑指offer》面试题26. 树的子结构
         
       </div>
     </a>
   
   
-    <a href="/2020/03/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">我的第一篇博客</div>
+    <a href="/2020/06/10/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9825.%20%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%8E%92%E5%BA%8F%E7%9A%84%E9%93%BE%E8%A1%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">《剑指offer》面试题25. 合并两个排序的链表</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -502,7 +500,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#示例"><span class="toc-number">1.</span> <span class="toc-text">示例:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#题解："><span class="toc-number">2.</span> <span class="toc-text">题解：</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#示例-1："><span class="toc-number">1.</span> <span class="toc-text">示例 1：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#限制："><span class="toc-number">2.</span> <span class="toc-text">限制：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#题解："><span class="toc-number">3.</span> <span class="toc-text">题解：</span></a></li></ol>
                     </div>
                 </span>
             </div>

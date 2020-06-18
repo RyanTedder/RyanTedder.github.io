@@ -7,7 +7,9 @@ a {
     // font-size: 16px;
 }    
 
-
+body {
+	width: 90%;
+}
 .mymenucontainer {
 	display:block;
 	cursor:pointer;
@@ -378,4 +380,14 @@ body {
 
 .tools-col .tools-section .search-ul .search-tag, .tools-col .tools-section .search-ul .search-time{
 	color: #9781BD;
+}
+
+.wrap-side-operation {
+	right: 180px;
+	bottom: 25px;
+}
+
+.tools-col .tools-section .search-tag.tagcloud .search-switch input:after{
+	top: 14.5px;
+	left: 1px;
 }
