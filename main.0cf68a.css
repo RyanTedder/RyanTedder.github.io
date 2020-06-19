@@ -391,3 +391,7 @@ body {
 	top: 14.5px;
 	left: 1px;
 }
+
+.tools-col .tools-section, .tools-col .tools-wrap {
+	color: #8B8E8F;
+}
