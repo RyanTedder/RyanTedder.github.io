@@ -420,19 +420,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-
         <p>输入两个链表，找出它们的第一个公共节点。</p>
 <p>如下面的两个链表：</p>
 <p><img src="https://i.loli.net/2020/07/09/WhAqZly9FjRuIrE.png" alt></p>
 <p>在节点 c1 开始相交。</p>
-<h5 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a>示例 1：</h5><p><img src="https://i.loli.net/2020/07/09/5VIBiz7xtlQEpbg.png" alt></p>
-<p>输入：intersectVal = 8, listA = [4,1,8,4,5], listB = [5,0,1,8,4,5], skipA = 2, skipB = 3<br>输出：Reference of the node with value = 8<br>输入解释：相交节点的值为 8 （注意，如果两个列表相交则不能为 0）。从各自的表头开始算起，链表 A 为 [4,1,8,4,5]，链表 B 为 [5,0,1,8,4,5]。在 A 中，相交节点前有 2 个节点；在 B 中，相交节点前有 3 个节点。</p>
-<h5 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a>示例 2：</h5><p><img src="https://i.loli.net/2020/07/09/YtfI9qzGiBCpn7K.png" alt></p>
-<p>输入：intersectVal = 0, listA = [2,6,4], listB = [1,5], skipA = 3, skipB = 2<br>输出：null<br>输入解释：从各自的表头开始算起，链表 A 为 [2,6,4]，链表 B 为 [1,5]。由于这两个链表不相交，所以 intersectVal 必须为 0，而 skipA 和 skipB 可以是任意值。<br>解释：这两个链表不相交，因此返回 null。</p>
-<h5 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h5><p>如果两个链表没有交点，返回 null.<br>在返回结果后，两个链表仍须保持原有的结构。<br>可假定整个链表结构中没有循环。<br>程序尽量满足 O(n) 时间复杂度，且仅用 O(1) 内存。</p>
-<h5 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) &#123;</span></span><br><span class="line"><span class="comment"> *         val = x;</span></span><br><span class="line"><span class="comment"> *         next = null;</span></span><br><span class="line"><span class="comment"> *     &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">//设公共部分为c,则链表A可以表示为a+c,链表B可以表示为b+c,故有a+c+b = b+c+a</span></span><br><span class="line">    <span class="comment">//若不在存在公共部分，则有a+b = b+a</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">getIntersectionNode</span><span class="params">(ListNode headA, ListNode headB)</span> </span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(headA == <span class="keyword">null</span> || headB == <span class="keyword">null</span>)  <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">      ListNode l1 = headA, l2 = headB;</span><br><span class="line">      <span class="keyword">while</span>(l1 != l2) &#123;</span><br><span class="line">          l1 = l1 == <span class="keyword">null</span> ? headB : l1.next;</span><br><span class="line">          l2 = l2 == <span class="keyword">null</span> ? headA : l2.next;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> l1;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+        
+          <a class="article-more-a" href="/2020/07/09/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9852.%E4%B8%A4%E4%B8%AA%E9%93%BE%E8%A1%A8%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%85%AC%E5%85%B1%E8%8A%82%E7%82%B9/#more">More >></a>
+        
       
 <!--结尾申明-->
       
@@ -1827,15 +1821,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">ico图标</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">life</a>
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1847,7 +1837,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color5">life</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1855,7 +1849,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
