@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.ryancyk.com">
-  <title>《剑指offer》面试题 57. 和为s的两个数字 | Ryanの秘密花园</title>
+  <title>《剑指offer》面试题 50.第一个只出现一次的字符 | Ryanの秘密花园</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="输入一个递增排序的数组和一个数字s，在数组中查找两个数，使得它们的和正好是s。如果有多对数字的和等于s，则输出任意一对即可。">
+  <meta name="description" content="在字符串 s 中找出第一个只出现一次的字符。如果没有，返回一个单空格。 s 只包含小写字母。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="《剑指offer》面试题 57. 和为s的两个数字">
-<meta property="og:url" content="http://www.ryancyk.com/2020/07/08/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%98.57%E5%92%8C%E4%B8%BAs%E7%9A%84%E4%B8%A4%E4%B8%AA%E6%95%B0%E5%AD%97/index.html">
+<meta property="og:title" content="《剑指offer》面试题 50.第一个只出现一次的字符">
+<meta property="og:url" content="http://www.ryancyk.com/2020/07/11/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9850.%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E5%AD%97%E7%AC%A6/index.html">
 <meta property="og:site_name" content="Ryanの秘密花园">
-<meta property="og:description" content="输入一个递增排序的数组和一个数字s，在数组中查找两个数，使得它们的和正好是s。如果有多对数字的和等于s，则输出任意一对即可。">
+<meta property="og:description" content="在字符串 s 中找出第一个只出现一次的字符。如果没有，返回一个单空格。 s 只包含小写字母。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-08T00:56:54.066Z">
-<meta property="article:modified_time" content="2020-07-08T02:22:12.515Z">
+<meta property="article:published_time" content="2020-07-11T00:59:40.663Z">
+<meta property="article:modified_time" content="2020-07-11T01:40:30.456Z">
 <meta property="article:author" content="RyanCYK">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="Leetcode">
@@ -219,21 +219,21 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-《剑指offer》面试题.57和为s的两个数字" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-《剑指offer》面试题50.第一个只出现一次的字符" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      《剑指offer》面试题 57. 和为s的两个数字
+      《剑指offer》面试题 50.第一个只出现一次的字符
     </h1>
   
 
         
         
-<a href="/2020/07/08/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%98.57%E5%92%8C%E4%B8%BAs%E7%9A%84%E4%B8%A4%E4%B8%AA%E6%95%B0%E5%AD%97/" class="archive-article-date">
-  	<time datetime="2020-07-08T00:56:54.066Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-08</time>
+<a href="/2020/07/11/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9850.%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E5%AD%97%E7%AC%A6/" class="archive-article-date">
+  	<time datetime="2020-07-11T00:59:40.663Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-11</time>
 </a>
 
 
@@ -260,7 +260,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text" style="font-size: 15px;color: navy"><i class="icon-book icon"></i>字数统计: </span>
-        <span class="post-count" style="font-size: 14px;color: navy">229</span>
+        <span class="post-count" style="font-size: 14px;color: navy">113</span>
       </span>
     </span>
     
@@ -281,11 +281,11 @@
     <div class="article-entry" itemprop="articleBody">
       
 
-        <p>输入一个递增排序的数组和一个数字s，在数组中查找两个数，使得它们的和正好是s。如果有多对数字的和等于s，则输出任意一对即可。<a id="more"></a></p>
-<h5 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a>示例 1：</h5><p><code>输入：nums = [2,7,11,15], target = 9</code><br><code>输出：[2,7] 或者 [7,2]</code></p>
-<h5 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a>示例 2：</h5><p><code>输入：nums = [10,26,30,31,47,60], target = 40</code><br><code>输出：[10,30] 或者 [30,10]</code></p>
-<h5 id="限制："><a href="#限制：" class="headerlink" title="限制："></a>限制：</h5><p><code>1 &lt;= nums.length &lt;= 10^5</code><br><code>1 &lt;= nums[i] &lt;= 10^6</code></p>
-<h5 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        <span class="comment">//利用set集合</span></span><br><span class="line">        <span class="comment">// Set&lt;Integer&gt; set = new HashSet&lt;&gt;();</span></span><br><span class="line">        <span class="comment">// for(int num : nums) &#123;</span></span><br><span class="line">        <span class="comment">//     if(!set.contains(target - num)) &#123;</span></span><br><span class="line">        <span class="comment">//         set.add(num);</span></span><br><span class="line">        <span class="comment">//     &#125; else &#123;</span></span><br><span class="line">        <span class="comment">//         return new int[]&#123;num, target - num&#125;;</span></span><br><span class="line">        <span class="comment">//     &#125;</span></span><br><span class="line">        <span class="comment">// &#125;</span></span><br><span class="line">        <span class="comment">// return new int[]&#123;&#125;;</span></span><br><span class="line">        <span class="comment">//双指针法</span></span><br><span class="line">        <span class="keyword">int</span> left = <span class="number">0</span>, right = nums.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(left &lt; right) &#123;</span><br><span class="line">            <span class="keyword">if</span>(target == nums[left] + nums[right]) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;nums[left], nums[right]&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(target &gt; nums[left] + nums[right]) &#123;</span><br><span class="line">                left++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                right--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;&#125;;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>在字符串 s 中找出第一个只出现一次的字符。如果没有，返回一个单空格。 s 只包含小写字母。<a id="more"></a></p>
+<h5 id="示例"><a href="#示例" class="headerlink" title="示例:"></a>示例:</h5><p><code>s = &quot;abaccdeff&quot;</code><br><code>返回 &quot;b&quot;</code></p>
+<p><code>s = &quot;&quot;</code><br><code>返回 &quot; &quot;</code></p>
+<h5 id="限制："><a href="#限制：" class="headerlink" title="限制："></a>限制：</h5><p><code>0 &lt;= s 的长度 &lt;= 50000</code></p>
+<h5 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">char</span> <span class="title">firstUniqChar</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length(); i++) &#123;</span><br><span class="line">            <span class="keyword">char</span> tmp = s.charAt(i);</span><br><span class="line">            <span class="keyword">if</span>(s.indexOf(tmp) == i &amp;&amp; s.indexOf(tmp, i + <span class="number">1</span>) == -<span class="number">1</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> tmp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">' '</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -324,16 +324,16 @@
     
     <br>
     <strong class="create-time">发布时间：</strong>
-    2020-07-08
+    2020-07-11
     <br>
     <strong class="update-time">最后更新：</strong>
-    2020-07-08
+    2020-07-11
     <br>
     <strong class="article-titles">本文标题：</strong>
-    <a href="http://www.ryancyk.com/2020/07/08/《剑指offer》面试题.57和为s的两个数字/" title="《剑指offer》面试题 57. 和为s的两个数字" target="_blank">《剑指offer》面试题 57. 和为s的两个数字</a>
+    <a href="http://www.ryancyk.com/2020/07/11/《剑指offer》面试题50.第一个只出现一次的字符/" title="《剑指offer》面试题 50.第一个只出现一次的字符" target="_blank">《剑指offer》面试题 50.第一个只出现一次的字符</a>
     <br>
     <strong class="article-url">本文链接：</strong>
-    <a href="http://www.ryancyk.com/2020/07/08/《剑指offer》面试题.57和为s的两个数字/" title="《剑指offer》面试题 57. 和为s的两个数字" target="_blank">http://www.ryancyk.com/2020/07/08/《剑指offer》面试题.57和为s的两个数字/</a>
+    <a href="http://www.ryancyk.com/2020/07/11/《剑指offer》面试题50.第一个只出现一次的字符/" title="《剑指offer》面试题 50.第一个只出现一次的字符" target="_blank">http://www.ryancyk.com/2020/07/11/《剑指offer》面试题50.第一个只出现一次的字符/</a>
     <br>
     <strong class="copyright">版权声明：</strong>
     本作品采用
@@ -459,7 +459,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://www.ryancyk.com/2020/07/08/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%98.57%E5%92%8C%E4%B8%BAs%E7%9A%84%E4%B8%A4%E4%B8%AA%E6%95%B0%E5%AD%97/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.ryancyk.com/2020/07/11/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9850.%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E5%AD%97%E7%AC%A6/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -473,18 +473,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/07/09/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9852.%E4%B8%A4%E4%B8%AA%E9%93%BE%E8%A1%A8%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%85%AC%E5%85%B1%E8%8A%82%E7%82%B9/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          《剑指offer》面试题52.两个链表的第一个公共节点
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/07/07/%E3%80%8A%E5%89%91%E6%8C%87offer%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%9839.%E6%95%B0%E7%BB%84%E4%B8%AD%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0%E8%B6%85%E8%BF%87%E4%B8%80%E5%8D%8A%E7%9A%84%E6%95%B0%E5%AD%97/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">《剑指offer》面试题39.数组中出现次数超过一半的数字</div>
+    <a href="/2020/07/10/Linux%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6%E6%97%B6%E6%8F%90%E7%A4%BA%E2%80%9DUnable%20to%20locate%20package%20xxx%E2%80%9C%E9%94%99%E8%AF%AF/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Linux安装软件时提示”Unable to locate package xxx“错误</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -511,7 +502,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#示例-1："><span class="toc-number">1.</span> <span class="toc-text">示例 1：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#示例-2："><span class="toc-number">2.</span> <span class="toc-text">示例 2：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#限制："><span class="toc-number">3.</span> <span class="toc-text">限制：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#题解："><span class="toc-number">4.</span> <span class="toc-text">题解：</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#示例"><span class="toc-number">1.</span> <span class="toc-text">示例:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#限制："><span class="toc-number">2.</span> <span class="toc-text">限制：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#题解："><span class="toc-number">3.</span> <span class="toc-text">题解：</span></a></li></ol>
                     </div>
                 </span>
             </div>
