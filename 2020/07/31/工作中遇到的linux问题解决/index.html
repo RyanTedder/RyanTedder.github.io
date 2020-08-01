@@ -17,7 +17,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://i.loli.net/2020/07/31/hlEQz91bTGiMcWV.png">
 <meta property="article:published_time" content="2020-07-31T02:57:41.337Z">
-<meta property="article:modified_time" content="2020-08-01T07:56:40.737Z">
+<meta property="article:modified_time" content="2020-08-01T08:08:01.230Z">
 <meta property="article:author" content="RyanCYK">
 <meta property="article:tag" content="problems">
 <meta name="twitter:card" content="summary">
@@ -261,7 +261,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text" style="font-size: 15px;color: navy"><i class="icon-book icon"></i>字数统计: </span>
-        <span class="post-count" style="font-size: 14px;color: navy">534</span>
+        <span class="post-count" style="font-size: 14px;color: navy">670</span>
       </span>
     </span>
     
@@ -310,6 +310,26 @@
 <p>通过修改 /etc/sudoers 文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod u-w &#x2F;etc&#x2F;sudoers</span><br><span class="line">sudo chmod +x &#x2F;etc&#x2F;sudoers</span><br></pre></td></tr></table></figure>
 
+<h5 id="五-查看linux服务器的系统信息"><a href="#五-查看linux服务器的系统信息" class="headerlink" title="五. 查看linux服务器的系统信息"></a>五. 查看linux服务器的系统信息</h5><p>①.查看网络信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig -a</span><br></pre></td></tr></table></figure>
+
+<p>②.查看系统内核</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -a</span><br></pre></td></tr></table></figure>
+
+<p>③.查看cpu信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat &#x2F;proc&#x2F;cpuinfo</span><br></pre></td></tr></table></figure>
+
+<p>④.查看内存信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat &#x2F;proc&#x2F;meminfo</span><br></pre></td></tr></table></figure>
+
+<p>⑤.查看板卡信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lspci</span><br><span class="line">cat &#x2F;proc&#x2F;pci</span><br></pre></td></tr></table></figure>
+
+<p>⑥. 查看当前系统运行情况</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ps -aux</span><br><span class="line">top (和windows的任务管理器类似，用于查看当前内存，CPU的使用信息)</span><br></pre></td></tr></table></figure>
+
+<p>⑦. 查看安装的一些服务软件信息</p>
+<p>软件一般来说安装在/user/local/目录下面，可以直接到这个目录下查看。</p>
 
       
 <!--结尾申明-->
@@ -498,7 +518,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#一-从linux服务器下载文件到本地："><span class="toc-number">1.</span> <span class="toc-text">一. 从linux服务器下载文件到本地：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#二-解决-usr-bin-xauth-file-home-user-Xauthority-does-not-exist-问题"><span class="toc-number">2.</span> <span class="toc-text">二. 解决 &#x2F;usr&#x2F;bin&#x2F;xauth: file &#x2F;home&#x2F;user&#x2F;.Xauthority does not exist 问题</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#三-更新ubuntu系统，解决无法下载package的问题"><span class="toc-number">3.</span> <span class="toc-text">三. 更新ubuntu系统，解决无法下载package的问题</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#四-将普通用户授予管理员权限"><span class="toc-number">4.</span> <span class="toc-text">四. 将普通用户授予管理员权限</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#一-从linux服务器下载文件到本地："><span class="toc-number">1.</span> <span class="toc-text">一. 从linux服务器下载文件到本地：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#二-解决-usr-bin-xauth-file-home-user-Xauthority-does-not-exist-问题"><span class="toc-number">2.</span> <span class="toc-text">二. 解决 &#x2F;usr&#x2F;bin&#x2F;xauth: file &#x2F;home&#x2F;user&#x2F;.Xauthority does not exist 问题</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#三-更新ubuntu系统，解决无法下载package的问题"><span class="toc-number">3.</span> <span class="toc-text">三. 更新ubuntu系统，解决无法下载package的问题</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#四-将普通用户授予管理员权限"><span class="toc-number">4.</span> <span class="toc-text">四. 将普通用户授予管理员权限</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#五-查看linux服务器的系统信息"><span class="toc-number">5.</span> <span class="toc-text">五. 查看linux服务器的系统信息</span></a></li></ol>
                     </div>
                 </span>
             </div>
