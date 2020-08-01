@@ -280,7 +280,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-
+        
         <p>请实现一个函数用来判断字符串是否表示数值（包括整数和小数）。例如，字符串”+100”、”5e2”、”-123”、”3.1416”、”0123”都表示数值，但”12e”、”1a3.14”、”1.2.3”、”+-5”、”-1E-16”及”12e+5.4”都不是。<a id="more"></a></p>
 <h5 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isNumber</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//正则表达式的使用</span></span><br><span class="line">        <span class="comment">// s = s.trim();</span></span><br><span class="line">        <span class="comment">// if(s == null || s.length() == 0) return false;</span></span><br><span class="line">        <span class="comment">// while(s.length() &gt; 0 &amp;&amp; s.charAt(0) == ' ') </span></span><br><span class="line">        <span class="comment">//     s = new StringBuilder(s).deleteCharAt(0).toString();</span></span><br><span class="line">        <span class="comment">// return s.matches("(([\\+\\-]?[0-9]+(\\.[0-9]*)?)|([\\+\\-]?\\.?[0-9]+))(e[\\+\\-]?[0-9]+)?");</span></span><br><span class="line">        <span class="comment">//利用函数和异常</span></span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(s.endsWith(<span class="string">"f"</span>)||s.endsWith(<span class="string">"d"</span>)||s.endsWith(<span class="string">"F"</span>)||s.endsWith(<span class="string">"D"</span>))</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> NumberFormatException();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">double</span> d = Double.parseDouble(s);</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;<span class="keyword">catch</span>(Exception e)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -886,7 +886,7 @@ MathJax.Hub.Queue(function() {
 <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <!-- <script type="text/javascript" src="/js/clipboard.js"></script>  -->
 <script type="text/javascript" src="/js/clipboard_use.js"></script>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+</body>
   <!--左侧关闭功能-->
 <script>
     var hide = false;
@@ -909,4 +909,16 @@ MathJax.Hub.Queue(function() {
         }
     }
 </script>
+<!--彩带2.自动飘动-->
+
+    <!-- <script src="https://g.joyinshare.com/hc/piao.js" type="text/javascript"></script> -->
+    <script type="text/javascript" src="/js/ribbon_flow.js"></script>
+
+<!-- 雪花特效3 -->
+
+  <script type="text/javascript" src="/js/snow3.js"></script>
+
+
+
+
 </html>
