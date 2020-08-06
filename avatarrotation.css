@@ -10,3 +10,31 @@
   -moz-transform: rotateZ(360deg);
   transform: rotateZ(360deg);
 }
+
+.overimg{ 
+position: relative; 
+/*display: block; */
+overflow: hidden;  
+box-shadow: 0 0 10px #FFF; 
+} 
+.light{ 
+	// cursor:pointer; 
+	position: absolute; 
+	left: -220px; 
+	top: 0; 
+	width: 60px; 
+	height: 90px; 
+	background-image: -moz-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0)); 
+	background-image: -webkit-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0)); 
+	transform: skewx(-25deg); 
+	-o-transform: skewx(-25deg); 
+	-moz-transform: skewx(-25deg); 
+	-webkit-transform: skewx(-25deg); 
+} 
+.overimg:hover .light{ 
+	left:220px; 
+	-moz-transition:0.8s; 
+	-o-transition:0.8s; 
+	-webkit-transition:0.8s; 
+	transition:0.8s; 
+} 

@@ -400,11 +400,15 @@ body {
 
 .overlay img{
 	// cursor: pointer;
-	transition: 0.8s;
+	transition: 2.1s;
 	opacity: 55%;
+	height: 180px;
 }
 .overlay img:hover {
 	opacity: 100%;
+	transform: scale(1.2) translate(20px);
+	-webkit-transform: scale(1.2) translate(20px);
+	
 }
 
 /** 鼠标样式 开始**/
