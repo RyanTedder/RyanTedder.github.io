@@ -19,31 +19,33 @@ body {
 	height:35px;
 	z-index:9999;
 	position:fixed;
+	transition:0.4s;
 }
 .mymenucontainer:hover {
-	background-color: #0087ca;
+	-webkit-transform:scale(1.13);
+	transform:scale(1.1);
 }
 .bar1 {
-	width:35px;
+	width:33px;
 	height:3px;
-	background-color:#4D4D4D;
+	background-color:#70B7FD;
 	margin:6px 0;
 	transition:0.4s;
 	-webkit-transform:rotate(-45deg) translate(-8px,8px);
 	transform:rotate(-45deg) translate(-8px,8px);
 }
 .bar2 {
-	width:35px;
+	width:33px;
 	height:3px;
-	background-color:#4D4D4D;
+	background-color:#DBDBDB;
 	margin:6px 0;
 	transition:0.4s;
 	opacity:0;
 }
 .bar3 {
-	width:35px;
+	width:33px;
 	height:3px;
-	background-color:#4D4D4D;
+	background-color:#ED242C;
 	margin:6px 0;
 	transition:0.4s;
 	-webkit-transform:rotate(45deg) translate(-4px,-6px);
@@ -396,3 +398,20 @@ body {
 	color: #8B8E8F;
 }
 
+.overlay img{
+	// cursor: pointer;
+	transition: 0.8s;
+	opacity: 55%;
+}
+.overlay img:hover {
+	opacity: 100%;
+}
+
+/** 鼠标样式 开始**/
+/** 普通指针样式**/
+body {
+cursor: url(//i.loli.net/2017/08/19/5997836b66d58.png), default;
+}
+/** 链接指针样式**/
+a:hover{cursor:url(//i.loli.net/2017/08/19/599783800335d.png), pointer;}
+/** 鼠标样式 结束**/
