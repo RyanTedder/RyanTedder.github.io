@@ -334,7 +334,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/25/%E5%89%8D%E7%AB%AF%E4%B8%89%E5%A4%A7%E6%A1%86%E6%9E%B6%E6%A6%82%E8%A6%81(AngularJS%E3%80%81React%E3%80%81Vue)/">前端三大框架概要(AngularJS、React、Vue)</a>
+      <a class="article-title" href="/2020/08/25/%E5%89%8D%E7%AB%AF%E4%B8%89%E5%A4%A7%E6%A1%86%E6%9E%B6%E6%A6%82%E8%A6%81(AngularJS%E3%80%81React%E3%80%81Vue)/">前端三大框架概要(React、Vue、Angular)</a>
     </h1>
   
 
@@ -363,7 +363,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text" style="font-size: 15px;color: navy"><i class="icon-book icon"></i>字数统计: </span>
-        <span class="post-count" style="font-size: 14px;color: navy">0</span>
+        <span class="post-count" style="font-size: 14px;color: navy">1.1k</span>
       </span>
     </span>
     
@@ -372,7 +372,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text" style="font-size: 15px;color: navy"> <i class="icon-book icon"></i>阅读时长: </span>
-        <span class="post-count" style="font-size: 14px;color: navy">1分</span>
+        <span class="post-count" style="font-size: 14px;color: navy">3分</span>
       </span>
     </span>
 </div>
@@ -384,7 +384,118 @@
     <div class="article-entry" itemprop="articleBody">
       
         
-        
+        <blockquote>
+<h3 id="一-React"><a href="#一-React" class="headerlink" title="一. React"></a>一. React</h3></blockquote>
+<p><img src="https://i.loli.net/2020/09/01/z6f7NjoCMmEOIbi.png" alt></p>
+<p>React起源于FaceBook的内部项目，用来架构Instagram网站，并于2013年5月开源。<br>React拥有较高的性能，代码逻辑非常简单，越来越多的人开始关注和使用它。它有以下的特性：</p>
+<blockquote>
+<p>  1.<strong>声明式设计</strong>：React采用声明范式，可以轻松描述应用;</p>
+<p>  2.<strong>高效</strong>：React通过对DOM的模拟，最大限度地减少与DOM的交互;</p>
+<p>  3.<strong>灵活</strong>：React可以与已知的库或框架很好地配合。</p>
+</blockquote>
+<p>它还有以下的优点：</p>
+<blockquote>
+<ol>
+<li><p><strong>速度快</strong>：在UI渲染过程中，React通过在虚拟DOM中的微操作来实现对实际DOM的局部更新；</p>
+</li>
+<li><p><strong>跨浏览器兼容</strong>：虚拟DOM帮助我们解决了跨浏览器问题，它为我们提供了标准化的API，甚至在IE8中都是没问题的；</p>
+</li>
+<li><p><strong>模块化</strong>：为你程序编写独立的模块化UI组件，这样当某个或某些组件出现问题时，可以方便地进行隔离；</p>
+</li>
+<li><p><strong>单向数据流</strong>：Flux是一个用于在JavaScript应用中创建单向数据层的架构，它随着React视图库的开发而被Facebook概念化；</p>
+</li>
+<li><p><strong>同构、纯粹的javascript</strong>：因为搜索引擎的爬虫程序依赖的是服务端响应而不是JavaScript的执行，预渲染你的应用有助于搜索引擎优化；</p>
+</li>
+<li><p><strong>兼容性好</strong>：比如使用RequireJS来加载和打包，而Browserify和Webpack适用于构建大型应用。它们使得那些艰难的任务不再让人望而生畏。</p>
+</li>
+</ol>
+</blockquote>
+<p>当然它也有缺点：</p>
+<blockquote>
+<p>React本身只是一个<strong>V</strong>而已，并不是一个完整的框架，所以如果是大型项目想要一套完整的框架的话，基本都需要加上ReactRouter和Flux才能写大型应用。</p>
+</blockquote>
+<blockquote>
+<h3 id="二-Vue"><a href="#二-Vue" class="headerlink" title="二. Vue"></a>二. Vue</h3></blockquote>
+<p><img src="https://i.loli.net/2020/09/01/y4vO6CB2Fm3iaPU.png" alt></p>
+<p>Vue是由国内程序员尤雨溪编写的，一个构建数据驱动的Web界面的库。准确来说不是一个框架，它聚焦在<strong>V（view）视图层</strong>。</p>
+<p>它有以下的特性：</p>
+<blockquote>
+<p><strong>1.轻量级的框架</strong></p>
+<p><strong>2.双向数据绑定</strong></p>
+<p><strong>3.指令</strong></p>
+<p><strong>4.插件化</strong></p>
+</blockquote>
+<p>它的优点如下：</p>
+<blockquote>
+<ol>
+<li><p><strong>简单</strong>：官方文档很清晰，比 Angular 简单易学。</p>
+</li>
+<li><p><strong>快速</strong>：异步批处理方式更新 DOM。</p>
+</li>
+<li><p><strong>组合</strong>：用解耦的、可复用的组件组合你的应用程序。</p>
+</li>
+<li><p><strong>紧凑</strong>：~18kb min+gzip，且无依赖。</p>
+</li>
+<li><p><strong>强大</strong>：表达式 无需声明依赖的可推导属性 (computed properties)。</p>
+</li>
+<li><p><strong>对模块友好</strong>：可以通过 NPM、Bower 或 Duo 安装，不强迫你所有的代码都遵循 Angular 的各种规定，使用场景更加灵活。</p>
+</li>
+</ol>
+</blockquote>
+<p>它的缺点如下：</p>
+<blockquote>
+<ol>
+<li><p><strong>新生儿</strong>：Vue.js是一个新的项目，没有angular那么成熟。</p>
+</li>
+<li><p><strong>影响较小</strong>：google了一下，有关于Vue.js多样性或者说丰富性少于其他一些有名的库。</p>
+</li>
+<li><p><strong>不支持IE8</strong></p>
+</li>
+</ol>
+</blockquote>
+<blockquote>
+<h3 id="三-Angular"><a href="#三-Angular" class="headerlink" title="三. Angular"></a>三. Angular</h3></blockquote>
+<p><img src="https://i.loli.net/2020/09/01/SEtpJOGYjH7qz1N.png" alt></p>
+<p>Angular是一款优秀的前端JS框架，已经被用于Google的多款产品当中。</p>
+<p>它有以下的特性：</p>
+<blockquote>
+<p><strong>1.良好的应用程序结构</strong></p>
+<p><strong>2.双向数据绑定</strong></p>
+<p><strong>3.指令</strong></p>
+<p><strong>4.HTML模板</strong></p>
+<p><strong>5.可嵌入、注入和测试</strong></p>
+</blockquote>
+<p>它的优点如下：</p>
+<blockquote>
+<ol>
+<li><p>模板功能强大丰富，自带了极其丰富的angular指令。</p>
+</li>
+<li><p>是一个比较完善的前端框架，包含服务，模板，数据双向绑定，模块化，路由，过滤器，依赖注入等所有功能；</p>
+</li>
+<li><p>自定义指令，自定义指令后可以在项目中多次使用。</p>
+</li>
+<li><p>ng模块化比较大胆的引入了Java的一些东西（依赖注入），能够很容易的写出可复用的代码，对于敏捷开发的团队来说非常有帮助。</p>
+</li>
+<li><p>angularjs是互联网巨人谷歌开发，这也意味着他有一个坚实的基础和社区支持。</p>
+</li>
+</ol>
+</blockquote>
+<p>它的缺点如下：</p>
+<blockquote>
+<ol>
+<li><p>angular 入门很容易 但深入后概念很多, 学习中较难理解.</p>
+</li>
+<li><p>文档例子非常少, 官方的文档基本只写了api, 一个例子都没有, 很多时候具体怎么用都是google来的, 或直接问misko,angular的作者.</p>
+</li>
+<li><p>对IE6/7 兼容不算特别好, 就是可以用jQuery自己手写代码解决一些.</p>
+</li>
+<li><p>指令的应用的最佳实践教程少, angular其实很灵活, 如果不看一些作者的使用原则,很容易写出 四不像的代码, 例如js中还是像jQuery的思想有很多dom操作.</p>
+</li>
+<li><p>DI 依赖注入 如果代码压缩需要显示声明.</p>
+</li>
+</ol>
+</blockquote>
+
       
 <!--结尾申明-->
       
@@ -1778,14 +1889,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">框架</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">ML</a>
               </li>
              
@@ -1794,7 +1897,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">框架</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">problems</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">环境搭建</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1806,23 +1925,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">problems</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">tips</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">IT</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color3">IT</a>
               </li>
             
             <div class="clearfix"></div>
